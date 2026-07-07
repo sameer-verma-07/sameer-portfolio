@@ -8,7 +8,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-black hero-grid text-white">
+    <section
+  id="home"
+  className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-black hero-grid text-white"
+  >
     <div className="hero-glow"></div>
      <div className="relative z-10">
 
@@ -64,13 +67,20 @@ export default function Hero() {
             {/* Buttons */}
             <div className="mt-10 flex flex-wrap gap-5">
 
-              <button className="rounded-xl bg-blue-600 px-8 py-4 font-semibold transition duration-300 hover:scale-105 hover:bg-blue-700 shadow-lg shadow-blue-500/30">
-                🚀 View Projects
-              </button>
+  <a
+    href="#projects"
+    className="rounded-xl bg-blue-600 px-8 py-4 font-semibold transition duration-300 hover:scale-105 hover:bg-blue-700 shadow-lg shadow-blue-500/30"
+  >
+    🚀 View Projects
+  </a>
 
-              <button className="rounded-xl border border-slate-600 px-8 py-4 font-semibold transition duration-300 hover:border-blue-500 hover:bg-slate-900">
-                📄 Download Resume
-              </button>
+  <a
+    href="/resume/resume.pdf"
+    download
+    className="rounded-xl border border-slate-600 px-8 py-4 font-semibold transition duration-300 hover:border-blue-500 hover:bg-slate-900"
+  >
+    📄 Download Resume
+  </a>
 
             </div>
 
@@ -78,7 +88,7 @@ export default function Hero() {
             <div className="mt-8 flex gap-4">
 
               <a
-                href="https://github.com/"
+                href="https://github.com/sameer-verma-07"
                 target="_blank"
                 className="p-4 rounded-full bg-slate-900 border border-slate-700 hover:bg-blue-600 transition"
               >
@@ -86,7 +96,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://linkedin.com/"
+                href="https://linkedin.com/in/sameer-verma-819398399/"
                 target="_blank"
                 className="p-4 rounded-full bg-slate-900 border border-slate-700 hover:bg-blue-600 transition"
               >

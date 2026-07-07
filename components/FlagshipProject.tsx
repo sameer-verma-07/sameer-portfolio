@@ -5,7 +5,10 @@ import BrowserMockup from "./BrowserMockup";
 
 export default function FlagshipProject() {
   return (
-    <section className="relative bg-slate-950 py-32 text-white overflow-hidden">
+   <section
+  id="projects"
+  className="relative bg-slate-950 py-32 text-white overflow-hidden"
+  > 
 
       {/* Background Glow */}
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-500/10 blur-[150px]" />

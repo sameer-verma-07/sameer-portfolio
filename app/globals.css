@@ -45,3 +45,7 @@ body {
     radial-gradient(circle at 80% 60%, rgba(168,85,247,.18), transparent 35%);
   pointer-events: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

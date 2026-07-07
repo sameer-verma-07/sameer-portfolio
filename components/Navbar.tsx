@@ -1,45 +1,59 @@
+"use client";
+
+const links = [
+  {
+    name: "Home",
+    href: "#home",
+  },
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Work",
+    href: "#projects",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
+
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-950/70 backdrop-blur-md border-b border-slate-800 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
+    <nav className="fixed top-0 left-0 z-50 w-full border-b border-slate-800 bg-slate-950/70 backdrop-blur-xl">
 
-        <h1 className="text-2xl font-bold">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
+        {/* Logo */}
+
+        <a
+          href="#home"
+          className="text-3xl font-black tracking-tight"
+        >
           <span className="text-blue-500">Sameer</span>.dev
-        </h1>
+        </a>
 
-        <div className="flex gap-8 text-gray-300">
+        {/* Navigation */}
 
-          <a
-            href="#"
-            className="hover:text-blue-400 transition"
-          >
-            Home
-          </a>
+        <div className="hidden items-center gap-10 md:flex">
 
-          <a
-            href="#"
-            className="hover:text-blue-400 transition"
-          >
-            About
-          </a>
+          {links.map((link) => (
 
-          <a
-            href="#"
-            className="hover:text-blue-400 transition"
-          >
-            Projects
-          </a>
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-slate-300 transition-all duration-300 hover:text-blue-400"
+            >
+              {link.name}
+            </a>
 
-          <a
-            href="#"
-            className="hover:text-blue-400 transition"
-          >
-            Contact
-          </a>
+          ))}
 
         </div>
 
       </div>
+
     </nav>
   );
 }

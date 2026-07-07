@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function BeyondTheCode() {
   return (
-    <section className="relative bg-slate-950 py-28 text-white overflow-hidden">
+    <section
+  id="about"
+  className="relative bg-slate-950 py-28 text-white overflow-hidden"
+  >
 
       {/* Background Glow */}
       <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
