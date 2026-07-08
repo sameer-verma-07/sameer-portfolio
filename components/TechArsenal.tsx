@@ -104,12 +104,44 @@ export default function TechArsenal() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * .08 }}
               viewport={{ once: true }}
-              className="group rounded-3xl border border-slate-800 bg-slate-900/60 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-3 hover:border-blue-500 hover:shadow-[0_0_40px_rgba(59,130,246,.2)]"
+              className="
+                         group
+                         rounded-3xl
+                         border
+                        border-slate-800
+
+                         bg-slate-900/60
+                        backdrop-blur-xl 
+                        p-8
+
+                        transition-all
+                        duration-300
+          
+                        shadow-[0_0_20px_rgba(59,130,246,.15)]
+
+                        md:shadow-none
+                        md:hover:-translate-y-3
+                        md:hover:border-blue-500
+                        md:hover:shadow-[0_0_40px_rgba(59,130,246,.25)]
+                                                                        "
             >
 
               <div
-                className={`text-6xl text-slate-300 transition-all duration-300 group-hover:scale-110 ${tech.color}`}
-              >
+  className={`
+    text-6xl
+    text-slate-300
+
+    scale-105
+    md:scale-100
+
+    transition-all
+    duration-300
+
+    md:group-hover:scale-110
+
+    ${tech.color}
+  `}
+>
                 {tech.icon}
               </div>
 

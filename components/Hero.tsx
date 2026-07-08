@@ -131,30 +131,35 @@ export default function Hero() {
           {/* RIGHT */}
           <div className="flex justify-center">
 
-            <motion.div
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="relative"
-            >
+  <motion.div
+    animate={{
+      y: [0, -15, 0],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="relative isolate flex items-center justify-center"
+  >
 
-              <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-[120px]"></div>
+    {/* Glow */}
+    <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-[120px]" />
 
-              <Image
-                src="/images/hero.png"
-                alt="AI Engineer"
-                width={850}
-                height={850}
-                priority
-                className="relative z-10 w-full max-w-[720px] h-auto"
-              />
-            <FloatingCards />
-            </motion.div>
+    {/* Floating Cards */}
+    <FloatingCards />
+
+    {/* Hero Image */}
+    <Image
+      src="/images/hero.png"
+      alt="AI Engineer"
+      width={850}
+      height={850}
+      priority
+      className="relative z-20 w-full max-w-[720px] md:max-w-[720px] max-w-[330px] h-auto"
+    />
+
+  </motion.div>
 
           </div>
 

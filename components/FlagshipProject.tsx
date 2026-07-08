@@ -101,6 +101,7 @@ export default function FlagshipProject() {
                 "Gemini AI",
                 "Firebase",
                 "Netlify",
+                "Vercel",
               ].map((tech) => (
                 <span
                   key={tech}
