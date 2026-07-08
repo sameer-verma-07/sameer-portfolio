@@ -38,7 +38,7 @@ This portfolio showcases my projects, skills, certifications, and my journey tow
 
 ## 🚀 Live Demo
 
-(Add your Netlify URL here)
+https://sameerverma-dev.vercel.app
 
 ---
 
