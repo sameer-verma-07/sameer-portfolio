@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata, Viewport } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,8 +50,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-
-  themeColor: "#020617",
 
   icons: {
     icon: [
@@ -117,17 +115,45 @@ export const metadata: Metadata = {
 },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#020617",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sameer Verma",
+  url: "https://sameerverma-dev.vercel.app",
+  image: "https://sameerverma-dev.vercel.app/og/og-image.png",
+  jobTitle: "Aspiring AI Engineer",
+  description:
+    "Aspiring AI Engineer building AI-powered applications using Python, Next.js, FastAPI and Generative AI.",
+  sameAs: [
+    "https://github.com/sameer-verma-07",
+    "https://www.linkedin.com/in/sameer-verma-819398399/",
+  ],
+};
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="bg-slate-950 text-white antialiased">
+       
+       <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(personJsonLd),
+  }}
+/>
+
         {children}
       </body>
     </html>
